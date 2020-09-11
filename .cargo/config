@@ -1,0 +1,9 @@
+[target.'cfg(all(target_arch = "arm", target_os = "none"))']
+rustflags = [
+  "--emit", "obj",
+  "-C", "soft-float=no",
+  "-C", "default-linker-libraries=no",
+]
+
+[build]
+target = "thumbv7em-none-eabihf"
